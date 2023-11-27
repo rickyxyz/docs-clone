@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: docs-clone-client
+    runtime: ruby
+    rootDir: client
+    buildFilter:
+      paths:
+        - client/**/*.jsx
+    buildCommand: npm run build
+    staticPublishPath: client/dist/
+    startCommand: npm run preview
+  - type: web
+    name: docs-clone-server
+    runtime: node
+    rootDir: server
+    buildFilter:
+      paths:
+        - server/**/*.jsx
+    buildCommand: npm i
+    startCommand: node server.js
