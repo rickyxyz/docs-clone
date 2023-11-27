@@ -7,7 +7,6 @@ services:
       paths:
         - client/**/*.jsx
     buildCommand: npm run build
-    staticPublishPath: client/dist/
     startCommand: npm run preview
   - type: web
     name: docs-clone-server
