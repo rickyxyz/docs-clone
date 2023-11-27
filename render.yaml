@@ -5,7 +5,7 @@ services:
     rootDir: client
     buildCommand: npm i; npm run build
     staticPublishPath: ./client/build/
-        buildFilter:
+    buildFilter:
       paths:
         - client/**/*.jsx
   - type: web
